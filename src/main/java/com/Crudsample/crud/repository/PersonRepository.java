@@ -4,7 +4,9 @@ package com.Crudsample.crud.repository;
 import com.Crudsample.crud.model.Person;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Repository
@@ -30,5 +32,9 @@ public class PersonRepository {
 
     public Person deletePersonDetails(int personId) {
         return map.remove(personId);
+    }
+
+    public List<Person> getAllPersonDetails() {
+        return new ArrayList<>(map.values());
     }
 }

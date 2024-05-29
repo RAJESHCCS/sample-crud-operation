@@ -5,7 +5,7 @@ import com.Crudsample.crud.repository.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-
+import java.util.List;
 
 
 @Service
@@ -28,5 +28,9 @@ public class PersonService{
 
     public Person deletePersonDetails(int personId) {
         return personRepository.deletePersonDetails(personId);
+    }
+
+    public List<Person> getAllDetails() {
+        return personRepository.getAllPersonDetails();
     }
 }
